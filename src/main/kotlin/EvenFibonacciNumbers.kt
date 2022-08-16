@@ -1,7 +1,7 @@
 import base.Solution
 import base.isEven
 
-class EvenFibonacciNumbers: Solution<Int> {
+class EvenFibonacciNumbers: Solution {
 
     companion object{
         const val ROOF = 4000000

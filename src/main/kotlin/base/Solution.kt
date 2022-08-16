@@ -1,6 +1,6 @@
 package base
 
-interface Solution<T> {
-    fun solve(): T
-    val rightSolution: T
+interface Solution {
+    fun solve(): Int
+    val rightSolution: Int
 }

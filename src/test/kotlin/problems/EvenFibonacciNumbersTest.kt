@@ -3,6 +3,6 @@ package problems
 import EvenFibonacciNumbers
 import base.ProblemTest
 
-class EvenFibonacciNumbersTest: ProblemTest<Int>() {
+class EvenFibonacciNumbersTest: ProblemTest() {
     override val solution = EvenFibonacciNumbers()
 }

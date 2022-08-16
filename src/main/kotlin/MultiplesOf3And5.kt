@@ -1,6 +1,6 @@
 import base.Solution
 
-class MultiplesOf3And5: Solution<Int> {
+class MultiplesOf3And5: Solution {
 
     companion object{
         const val FLOOR = 3

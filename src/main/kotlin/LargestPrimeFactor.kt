@@ -1,7 +1,7 @@
 import base.*
 import kotlinx.coroutines.*
 
-class LargestPrimeFactor : Solution<Int> {
+class LargestPrimeFactor : Solution {
 
     companion object{
         const val GOAL = 600851475143

@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 
-abstract class ProblemTest<T> {
-    abstract val solution: Solution<T>
+abstract class ProblemTest {
+    abstract val solution: Solution
 
     @Test
     fun test(){
