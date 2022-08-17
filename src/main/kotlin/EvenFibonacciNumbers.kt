@@ -7,13 +7,13 @@ class EvenFibonacciNumbers: Solution {
         const val ROOF = 4000000
     }
 
-    override val rightSolution = 4613732
+    override val rightSolution = 4613732L
 
-    override fun solve(): Int {
+    override fun solve(): Long {
         var currentElement = 2
         var lastElement = 1
 
-        var sumEvens = 0
+        var sumEvens = 0L
 
         while (currentElement < ROOF){
             if(currentElement.isEven()){

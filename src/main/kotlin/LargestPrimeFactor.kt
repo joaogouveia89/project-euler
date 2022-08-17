@@ -7,7 +7,7 @@ class LargestPrimeFactor : Solution {
         const val GOAL = 600851475143
     }
 
-    override val rightSolution = 6857
+    override val rightSolution = 6857L
 
     private val scope = CoroutineScope(Dispatchers.IO + Job())
     private var largestPrimeFactor: Long = 0L
@@ -20,7 +20,7 @@ class LargestPrimeFactor : Solution {
 
 
     @DelicateCoroutinesApi
-    override fun solve(): Int {
+    override fun solve(): Long {
         // we can safely say that after the number 2 all prime numbers are odds, because the even ones are divisible by 2
         // we can test any number more than the square root rounding to floor
         runBlocking {
@@ -44,6 +44,6 @@ class LargestPrimeFactor : Solution {
             jobs.joinAll()
         }
 
-        return largestPrimeFactor.toInt()
+        return largestPrimeFactor
     }
 }

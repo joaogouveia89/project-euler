@@ -1,6 +1,6 @@
 package base
 
 interface Solution {
-    fun solve(): Int
-    val rightSolution: Int
+    fun solve(): Long
+    val rightSolution: Long
 }

@@ -5,9 +5,9 @@ class SmallestMultiple: Solution {
 		const val FLOOR = 2520
 	}
 
-	override val rightSolution = 232792560
+	override val rightSolution = 232792560L
 
-	override fun solve(): Int {
+	override fun solve(): Long {
 		var found = false
 		var testing = FLOOR
 
@@ -19,6 +19,6 @@ class SmallestMultiple: Solution {
 			//numbers which don't end in 0 will never be divisible for 10, so I skip them
 			if(!found) testing += 10
 		}
-		return testing
+		return testing.toLong()
 	}
  }

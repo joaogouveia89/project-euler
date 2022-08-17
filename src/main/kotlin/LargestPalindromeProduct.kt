@@ -8,13 +8,13 @@ class LargestPalindromeProduct: Solution {
         const val ROOF = 999
     }
 
-    override val rightSolution = 906609
+    override val rightSolution = 906609L
 
     private var mul = 0L
 
     private var largestPalindromeProduct: Long = 0L
 
-    override fun solve(): Int {
+    override fun solve(): Long {
         for(a in FLOOR..ROOF){
             for(b in FLOOR..ROOF){
                 mul = (a * b).toLong()
@@ -24,6 +24,6 @@ class LargestPalindromeProduct: Solution {
             }
         }
 
-        return largestPalindromeProduct.toInt()
+        return largestPalindromeProduct
     }
 }
