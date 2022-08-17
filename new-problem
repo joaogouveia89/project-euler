@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+def problem_file_template class_name
+    content = "import base.*\n\n"
+    content = content + "class " + class_name + ": Solution { \n"
+    content = content + "\toverride val rightSolution = 0 /* ENTER HERE THE SOLUTION RESULT */ \n"
+    content = content + "\toverride fun solve(): Int = 0 \n }"
+    content
+end
+
+def problem_test_file_template class_name
+    content = "package problems\n\nimport " + class_name + "\nimport base.ProblemTest\n\n"
+    content = content + "class " + class_name + "Test: ProblemTest() { \n"
+    content = content + "\toverride val solution = " + class_name +"() \n}"
+    content
+end
+
+if ARGV.size < 1
+    puts "Problem name missing"
+    exit 1
+end
+
+class_name = ""
+
+for arg in ARGV
+   class_name = class_name + arg.capitalize
+end
+
+class_name.strip!
+problem_file_name = class_name + ".kt"
+problem_file_name_path = "src/main/kotlin/"
+
+problem_test_file_name = class_name + "Test.kt"
+problem_test_file_name_path = "src/test/kotlin/problems/"
+
+puts "Creating " + problem_file_name
+
+File.open(problem_file_name_path + problem_file_name, "w") do |f|
+    f.write(problem_file_template(class_name))
+end
+
+puts "Creating " + problem_test_file_name
+
+File.open(problem_test_file_name_path + problem_test_file_name, "w") do |f|
+    f.write(problem_test_file_template(class_name))
+end
