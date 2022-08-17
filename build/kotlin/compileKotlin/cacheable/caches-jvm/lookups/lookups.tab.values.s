@@ -1,1 +1,0 @@
-ÀIÔKÍR…HÂHÙK“F‡GÙAÙA∆LÓLÁM
