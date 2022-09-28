@@ -3,8 +3,8 @@
 def problem_file_template class_name
     content = "import base.*\n\n"
     content = content + "class " + class_name + ": Solution { \n"
-    content = content + "\toverride val rightSolution = 0 /* ENTER HERE THE SOLUTION RESULT */ \n"
-    content = content + "\toverride fun solve(): Int = 0 \n }"
+    content = content + "\toverride val rightSolution = 0L /* ENTER HERE THE SOLUTION RESULT */ \n"
+    content = content + "\toverride fun solve(): Int = 0L \n }"
     content
 end
 

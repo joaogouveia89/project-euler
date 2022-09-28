@@ -31,7 +31,10 @@ class LargestProductInASeries(
         "84580156166097919133875499200524063689912560717606".toCharArray(),
         "05886116467109405077541002256983155200055935729725".toCharArray(),
         "71636269561882670428252483600823257530420752963450".toCharArray(),
-    ).map { it.map { charInt -> charInt.digitToInt() } }.flatten().map { it.toLong() }.toLongArray()
+    ).map { it.map { charInt -> charInt.digitToInt() } }
+        .flatten()
+        .map { it.toLong() }
+        .toLongArray()
 
 	private val sequenceSize = sequence.size
 
