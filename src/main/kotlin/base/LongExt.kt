@@ -9,6 +9,8 @@ fun Long.isOdd() = this % 2L == 1L
 fun Long.isMultipleOf(toCheck: Long) = this % toCheck == 0L
 
 fun Long.isPrime(): Boolean{
+    if(this != 2L && this % 2L == 0L) return false
+
     val sqrt = this.sqrt() + 1
     for(i in 2L..sqrt){
         if(this % i == 0L){
