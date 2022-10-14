@@ -15,22 +15,19 @@ class LongGrid(private val lines: Int, private val columns: Int, private val ele
 
     fun get(line: Int, column: Int) = elements[lines * line + column]
 
-    private fun isValidRangeRight( from: Int, rangeSize: Int) =
-        from + rangeSize < columns
-
     fun getRange(fromLine: Int,
                  fromColumn: Int,
                  rangeSize: Int,
                  rangeDirection: RangeDirection = RangeDirection.RIGHT): LongArray =
-        if (!rangeDirection.isValid(columns, lines, fromLine, fromColumn, rangeSize)) longArrayOf()
-        else
+        if (rangeDirection.isValid(columns, lines, fromLine, fromColumn, rangeSize))
             when(rangeDirection){
-
-                RangeDirection.RIGHT -> elements.copyOfRange(lines * fromLine + fromColumn, lines * fromLine + fromColumn + rangeSize + 1)
+                RangeDirection.RIGHT -> elements.copyOfRange(lines * fromLine + fromColumn, lines * fromLine + fromColumn + rangeSize)
                 // an = a1 + (n - 1) * r
                 RangeDirection.DOWN -> (1 until rangeSize + 1).map { elements[(lines * fromLine + fromColumn) + (it - 1) * columns] }.toLongArray()
                 RangeDirection.DIAGONAL_DOWN ->  (1 until rangeSize + 1).map { elements[(lines * fromLine + fromColumn) + (it - 1) * (columns + 1)] }.toLongArray()
                 RangeDirection.DIAGONAL_UP -> (1 until rangeSize + 1).map { elements[(lines * fromLine + fromColumn) + (it - 1) * (columns - 1) * -1] }.toLongArray()
             }
+        else longArrayOf()
+
 
 }
