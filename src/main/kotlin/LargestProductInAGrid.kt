@@ -1,5 +1,6 @@
 import base.*
 import grid.LongGrid
+import grid.RangeDirection
 import kotlinx.coroutines.runBlocking
 
 class LargestProductInAGrid: Solution { 
@@ -27,7 +28,7 @@ class LargestProductInAGrid: Solution {
 										"01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48")
 
 	override fun solve(): Long = runBlocking {
-		val range = grid.getRange(0, 16, 4, LongGrid.Direction.RIGHT)
+		val range = grid.getRange(0, 16, 4, RangeDirection.RIGHT)
 		println(range.toList())
 		70600674L
 	}
