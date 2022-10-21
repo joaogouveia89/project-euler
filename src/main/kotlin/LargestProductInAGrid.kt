@@ -46,7 +46,6 @@ class LargestProductInAGrid: Solution {
 				}
 			}
 		}
-		println("opened ${coroutines.size} coroutines")
 		coroutines.awaitAll().max()
 	}
  }
