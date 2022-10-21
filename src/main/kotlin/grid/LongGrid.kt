@@ -1,6 +1,6 @@
 package grid
 
-class LongGrid(private val lines: Int, private val columns: Int, private val elements: LongArray){
+class LongGrid(val lines: Int, val columns: Int, private val elements: LongArray){
 
     companion object{
         fun fromText(gridStr: String, numbersSeparatorCharacter: Char = ' '): LongGrid{

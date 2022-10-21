@@ -16,5 +16,9 @@ enum class RangeDirection : RangeValidation {
     DIAGONAL_UP {
         override fun isValid(gridWidth: Int, gridHeight: Int, fromLine: Int, fromColumn: Int, rangeSize: Int): Boolean =
             fromColumn + rangeSize <= gridWidth && fromLine - rangeSize >= 0
+    };
+
+    companion object {
+        val directions = RangeDirection.values()
     }
 }

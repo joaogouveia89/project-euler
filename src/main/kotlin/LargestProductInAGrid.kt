@@ -1,10 +1,16 @@
 import base.*
 import grid.LongGrid
 import grid.RangeDirection
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
+import java.util.concurrent.atomic.AtomicLong
 
-class LargestProductInAGrid: Solution { 
+class LargestProductInAGrid: Solution {
+	private val coroutines = mutableListOf<Deferred<Long>>()
+	private val scope = CoroutineScope(Dispatchers.IO + Job())
+
 	override val rightSolution = 70600674L
+
+	private val rangeSize = 4
 
 	private val grid = LongGrid.fromText("08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n" +
 										"49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\n" +
@@ -28,8 +34,19 @@ class LargestProductInAGrid: Solution {
 										"01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48")
 
 	override fun solve(): Long = runBlocking {
-		val range = grid.getRange(16, 16, 4, RangeDirection.DIAGONAL_UP)
-		println(range.toList())
-		70600674L
+		for(line in 0 until grid.lines){
+			for(column in 0 until grid.columns){
+				for(direction in RangeDirection.directions){
+					coroutines.add(
+						scope.async {
+							grid.getRange(line, column, rangeSize, direction)
+								.mulAll()
+						}
+					)
+				}
+			}
+		}
+		println("opened ${coroutines.size} coroutines")
+		coroutines.awaitAll().max()
 	}
  }
