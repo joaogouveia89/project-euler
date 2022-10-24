@@ -16,7 +16,7 @@
 
 ### Solved problems(Alphabetical order):
 
-Problem | Solved date
+Problem | Last update
 --- | ---
 [Even Fibonacci Numbers](src/main/kotlin/EvenFibonacciNumbers.kt) | 2022, Aug 17
 [Largest Palindrome Product](src/main/kotlin/LargestPalindromeProduct.kt) | 2022, Aug 17

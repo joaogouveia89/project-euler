@@ -1,9 +1,9 @@
 import base.Solution
 import base.isPalindrome
 
-class LargestPalindromeProduct: Solution {
+class LargestPalindromeProduct : Solution {
 
-    companion object{
+    companion object {
         const val FLOOR = 100
         const val ROOF = 999
     }
@@ -15,10 +15,10 @@ class LargestPalindromeProduct: Solution {
     private var largestPalindromeProduct: Long = 0L
 
     override fun solve(): Long {
-        for(a in FLOOR..ROOF){
-            for(b in FLOOR..ROOF){
+        for (a in FLOOR..ROOF) {
+            for (b in FLOOR..ROOF) {
                 mul = (a * b).toLong()
-                if(mul.toString().isPalindrome() && mul > largestPalindromeProduct){
+                if (mul.toString().isPalindrome() && mul > largestPalindromeProduct) {
                     largestPalindromeProduct = mul
                 }
             }

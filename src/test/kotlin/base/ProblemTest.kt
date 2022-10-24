@@ -8,7 +8,7 @@ abstract class ProblemTest {
     abstract val solution: Solution
 
     @Test
-    fun test(){
+    fun test() {
         assertEquals(solution.rightSolution, solution.solve())
     }
 }

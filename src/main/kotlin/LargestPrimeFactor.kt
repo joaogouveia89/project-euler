@@ -3,7 +3,7 @@ import kotlinx.coroutines.*
 
 class LargestPrimeFactor : Solution {
 
-    companion object{
+    companion object {
         const val GOAL = 600851475143
     }
 
@@ -13,8 +13,8 @@ class LargestPrimeFactor : Solution {
     private var largestPrimeFactor: Long = 0L
 
     @Synchronized
-    private fun checkAndUpdateLargestPrimeFactor(newValue: Long){
-        if(newValue > this.largestPrimeFactor)
+    private fun checkAndUpdateLargestPrimeFactor(newValue: Long) {
+        if (newValue > this.largestPrimeFactor)
             this.largestPrimeFactor = newValue
     }
 
@@ -27,12 +27,12 @@ class LargestPrimeFactor : Solution {
             val jobs = mutableListOf<Job>()
             var current = 1L
 
-            while (current.pow(2) < GOAL){
+            while (current.pow(2) < GOAL) {
                 // important to avoid racing conditions
                 current.let {
-                    if(it.isOdd() && GOAL.isMultipleOf(it)){
+                    if (it.isOdd() && GOAL.isMultipleOf(it)) {
                         jobs.add(scope.launch {
-                            if(it.isPrime()){
+                            if (it.isPrime()) {
                                 checkAndUpdateLargestPrimeFactor(it)
                             }
                         })

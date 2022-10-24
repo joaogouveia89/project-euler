@@ -1,9 +1,9 @@
 import base.Solution
 import base.isEven
 
-class EvenFibonacciNumbers: Solution {
+class EvenFibonacciNumbers : Solution {
 
-    companion object{
+    companion object {
         const val ROOF = 4000000
     }
 
@@ -15,8 +15,8 @@ class EvenFibonacciNumbers: Solution {
 
         var sumEvens = 0L
 
-        while (currentElement < ROOF){
-            if(currentElement.isEven()){
+        while (currentElement < ROOF) {
+            if (currentElement.isEven()) {
                 sumEvens += currentElement
             }
 

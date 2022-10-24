@@ -1,4 +1,5 @@
-import base.*
+import base.Solution
+import base.mulAll
 import kotlinx.coroutines.*
 
 class LargestProductInASeries(
@@ -36,7 +37,7 @@ class LargestProductInASeries(
         .map { it.toLong() }
         .toLongArray()
 
-	private val sequenceSize = sequence.size
+    private val sequenceSize = sequence.size
 
     private suspend fun mullFrom(index: Int) = withContext(Dispatchers.IO) {
         if (index + sequenceChecking >= sequenceSize) 0L
@@ -44,10 +45,11 @@ class LargestProductInASeries(
             .copyOfRange(index, index + sequenceChecking)
             .mulAll()
     }
+
     override fun solve() = runBlocking {
         val coroutines = mutableListOf<Deferred<Long>>()
         sequence.forEachIndexed { index, _ ->
-			coroutines.add(scope.async { mullFrom(index) })
+            coroutines.add(scope.async { mullFrom(index) })
         }
         coroutines.awaitAll().max()
     }

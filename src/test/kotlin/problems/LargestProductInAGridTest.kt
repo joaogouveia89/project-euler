@@ -3,6 +3,6 @@ package problems
 import LargestProductInAGrid
 import base.ProblemTest
 
-class LargestProductInAGridTest: ProblemTest() { 
-	override val solution = LargestProductInAGrid() 
+class LargestProductInAGridTest : ProblemTest() {
+    override val solution = LargestProductInAGrid()
 }

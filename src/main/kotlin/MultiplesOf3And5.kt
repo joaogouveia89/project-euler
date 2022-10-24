@@ -1,8 +1,8 @@
 import base.Solution
 
-class MultiplesOf3And5: Solution {
+class MultiplesOf3And5 : Solution {
 
-    companion object{
+    companion object {
         const val FLOOR = 3
         const val ROOF = 999
     }
@@ -11,8 +11,8 @@ class MultiplesOf3And5: Solution {
 
     override fun solve(): Long {
         var sum = 0L
-        for (i in FLOOR..ROOF){
-            if(i % 3 == 0 || i % 5 == 0){
+        for (i in FLOOR..ROOF) {
+            if (i % 3 == 0 || i % 5 == 0) {
                 sum += i
             }
         }

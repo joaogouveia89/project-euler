@@ -50,7 +50,7 @@ File.open("README.md", "w") do |file|
     file.write "- Click on Run\n\n"
     file.write "## Last Solution: " + "[" + last_solution.name + "](" + last_solution.file + ")\n\n"
     file.write "### Solved problems(Alphabetical order):\n\n"
-    file.write "Problem | Solved date\n"
+    file.write "Problem | Last update\n"
     file.write "--- | ---\n"
     solutions.each do |solution|
         file.write "[" + solution.name + "](" + solution.file + ") | " + solution.solution_date.strftime('%Y, %b %d' + "\n")
