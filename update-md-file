@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+
+require 'date'
+
+SRCS_PATH = "src/main/kotlin"
+
+files = Dir.entries(SRCS_PATH)
+
+class Solution
+    attr_accessor :name, :file, :solution_date
+
+    def initialize(file, sd)
+         file_name_spitted = file.split('/')
+         final_name_array = file_name_spitted[file_name_spitted.size - 1].delete_suffix(".kt").split /(?=[A-Z0-9])/
+         @name = final_name_array.join(" ")
+         @file = file
+         @solution_date = sd
+    end
+
+    def to_s
+        @name + " - " + @file + " - " + @solution_date.to_s
+    end
+end
+
+solutions = []
+
+files.each do |file|
+    unless file == "." || file == ".." || !file.match(/.*\.kt$/)
+        git_result = `git log -1 --format=%cd #{SRCS_PATH + "/" + file}`
+        date = Date.parse(git_result)
+        solutions << Solution.new(SRCS_PATH + "/" + file, date)
+    end
+end
+
+solutions = solutions.sort_by {|solution| solution.file}
+last_solution = solutions.max_by {|solution| solution.solution_date }
+
+# recreating md file
+
+File.open("README.md", "w") do |file|
+    file.write "# [Project Euler](https://projecteuler.net) Solutions in Kotlin\n\n"
+    file.write "## Description:\n"
+    file.write "### My solutions for the problems proposed in the platform, Kotlin programming language, object-oriented approach, and Coroutines for parallel tasks\n\n"
+    file.write "## Goal:\n"
+    file.write "### Explore Kotlin and algorithms solving skills\n\n"
+    file.write "## Compile & Run\n"
+    file.write "- Open IntelliJ IDEA\n"
+    file.write "- On Project window, expand src folder\n"
+    file.write "- Right click on test folder\n"
+    file.write "- Click on Run\n\n"
+    file.write "## Last Solution: " + "[" + last_solution.name + "](" + last_solution.file + ")\n\n"
+    file.write "### Solved problems(Alphabetical order):\n\n"
+    file.write "Problem | Solved date\n"
+    file.write "--- | ---\n"
+    solutions.each do |solution|
+        file.write "[" + solution.name + "](" + solution.file + ") | " + solution.solution_date.strftime('%Y, %b %d' + "\n")
+    end
+end
