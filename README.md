@@ -12,7 +12,7 @@
 - Right click on test folder
 - Click on Run
 
-## Last Solution: [Largest Product In A Grid](src/main/kotlin/LargestProductInAGrid.kt) | 2022, Oct 24
+## Last Solution: [Largest Product In A Grid](src/main/kotlin/LargestProductInAGrid.kt)
 
 ### Solved problems(Alphabetical order):
 
