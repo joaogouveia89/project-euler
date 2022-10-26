@@ -12,12 +12,13 @@
 - Right click on test folder
 - Click on Run
 
-## Last Solution: [Large Sum](src/main/kotlin/LargeSum.kt)
+## Last Solution: [Counting Sundays](src/main/kotlin/CountingSundays.kt)
 
 ### Solved problems(Alphabetical order):
 
 Problem | Last update
 --- | ---
+[Counting Sundays](src/main/kotlin/CountingSundays.kt) | 2022, Oct 26
 [Even Fibonacci Numbers](src/main/kotlin/EvenFibonacciNumbers.kt) | 2022, Oct 24
 [Highly Divisible Triangular Number](src/main/kotlin/HighlyDivisibleTriangularNumber.kt) | 2022, Oct 26
 [Large Sum](src/main/kotlin/LargeSum.kt) | 2022, Oct 26
