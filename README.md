@@ -12,7 +12,7 @@
 - Right click on test folder
 - Click on Run
 
-## Last Solution: [Highly Divisible Triangular Number](src/main/kotlin/HighlyDivisibleTriangularNumber.kt)
+## Last Solution: [Large Sum](src/main/kotlin/LargeSum.kt)
 
 ### Solved problems(Alphabetical order):
 
@@ -20,6 +20,7 @@ Problem | Last update
 --- | ---
 [Even Fibonacci Numbers](src/main/kotlin/EvenFibonacciNumbers.kt) | 2022, Oct 24
 [Highly Divisible Triangular Number](src/main/kotlin/HighlyDivisibleTriangularNumber.kt) | 2022, Oct 26
+[Large Sum](src/main/kotlin/LargeSum.kt) | 2022, Oct 26
 [Largest Palindrome Product](src/main/kotlin/LargestPalindromeProduct.kt) | 2022, Oct 24
 [Largest Prime Factor](src/main/kotlin/LargestPrimeFactor.kt) | 2022, Oct 24
 [Largest Product In A Grid](src/main/kotlin/LargestProductInAGrid.kt) | 2022, Oct 24
