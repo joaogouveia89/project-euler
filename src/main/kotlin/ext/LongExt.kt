@@ -23,8 +23,8 @@ fun Long.isPrime(): Boolean {
 }
 
 // thanks to https://stackoverflow.com/a/5406805
-fun Long.nUmOfDivisors(): Long{
-    if(this == 1L) return this
+fun Long.nUmOfDivisors(): Long {
+    if (this == 1L) return this
 
     var limit = this
     var numOfDivisors = 0L
@@ -33,10 +33,10 @@ fun Long.nUmOfDivisors(): Long{
     /* I tried to use for(i in 1 until limit) here, but it doesn't work, as in the tests it seems that the limit variable is not being updated
      * as it supposed to do, to avoid a bug in the algorithm.
      */
-    while(i < limit){
-        if(this % i == 0L){
+    while (i < limit) {
+        if (this % i == 0L) {
             limit = this / i
-            if(limit != i)  numOfDivisors++
+            if (limit != i) numOfDivisors++
             numOfDivisors++
         }
         i++
