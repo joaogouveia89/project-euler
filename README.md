@@ -12,7 +12,7 @@
 - Right click on test folder
 - Click on Run
 
-## Last Solution: [Counting Sundays](src/main/kotlin/CountingSundays.kt)
+## Last Solution: [Longest Collatz Sequence](src/main/kotlin/LongestCollatzSequence.kt)
 
 ### Solved problems(Alphabetical order):
 
@@ -26,6 +26,7 @@ Problem | Last update
 [Largest Prime Factor](src/main/kotlin/LargestPrimeFactor.kt) | 2022, Oct 24
 [Largest Product In A Grid](src/main/kotlin/LargestProductInAGrid.kt) | 2022, Oct 24
 [Largest Product In A Series](src/main/kotlin/LargestProductInASeries.kt) | 2022, Oct 24
+[Longest Collatz Sequence](src/main/kotlin/LongestCollatzSequence.kt) | 2022, Oct 27
 [Multiples Of 3 And 5](src/main/kotlin/MultiplesOf3And5.kt) | 2022, Oct 24
 [Smallest Multiple](src/main/kotlin/SmallestMultiple.kt) | 2022, Oct 24
 [Special Pythagorean Triplet](src/main/kotlin/SpecialPythagoreanTriplet.kt) | 2022, Oct 24
