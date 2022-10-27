@@ -1,3 +1,4 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -19,6 +20,23 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = TestExceptionFormat.FULL
+        events("skipped", "failed", "passed")
+    }
+
+    addTestListener(object : TestListener {
+        override fun beforeTest(p0: TestDescriptor?) = Unit
+        override fun beforeSuite(p0: TestDescriptor?) = Unit
+        override fun afterTest(desc: TestDescriptor, result: TestResult){
+            if(result.resultType == TestResult.ResultType.SUCCESS){
+                println("${desc.className} elapsed ${result.endTime - result.startTime} ms")
+            }
+        }
+        override fun afterSuite(desc: TestDescriptor, result: TestResult) = Unit
+    })
 }
 
 tasks.withType<KotlinCompile> {
