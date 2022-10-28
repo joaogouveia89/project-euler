@@ -1,34 +1,53 @@
 #!/usr/bin/env ruby
 
 require 'date'
+require 'os'
 
 SRCS_PATH = "src/main/kotlin"
 
 files = Dir.entries(SRCS_PATH)
 
 class Solution
-    attr_accessor :name, :file, :solution_date
+    attr_accessor :name, :file, :solution_date, :elapsed_time
 
-    def initialize(file, sd)
+    def initialize(file, sd, elapsed_time)
          file_name_spitted = file.split('/')
          final_name_array = file_name_spitted[file_name_spitted.size - 1].delete_suffix(".kt").split /(?=[A-Z0-9])/
          @name = final_name_array.join(" ")
          @file = file
          @solution_date = sd
+         @elapsed_time = elapsed_time
     end
 
     def to_s
-        @name + " - " + @file + " - " + @solution_date.to_s
+        @name + " - " + @file + " - " + @solution_date.to_s + " - " + @elapsed_time + " ms"
+    end
+end
+
+class SystemInformation
+    attr_accessor :chip_name, :processor_cores, :ram
+
+    def initialize
+        if OS.mac?
+            @chip_name = `system_profiler SPHardwareDataType | grep "Chip"`.strip.delete_prefix("Chip: ")
+            @processor_cores = `system_profiler SPHardwareDataType | grep "Cores"`.strip.delete_prefix("Total Number of Cores: ").split(" ")[0]
+            @ram = `system_profiler SPHardwareDataType | grep "Memory"`.strip.delete_prefix("Memory: ")
+        end
     end
 end
 
 solutions = []
+test_running_result = `./gradlew clean && ./gradlew -i test | grep "^problems\."`
+test_running_result = test_running_result.split /problems\./
+test_running_result.shift
 
 files.each do |file|
     unless file == "." || file == ".." || !file.match(/.*\.kt$/)
         git_result = `git log -1 --format=%cd #{SRCS_PATH + "/" + file}`
         date = Date.parse(git_result)
-        solutions << Solution.new(SRCS_PATH + "/" + file, date)
+        # et = test_running_result[index].split(' ')[2]
+        et = test_running_result.find{ |i| i[file.delete_suffix(".kt")] }
+        solutions << Solution.new(SRCS_PATH + "/" + file, date, et.split(" ")[2])
     end
 end
 
@@ -36,6 +55,8 @@ solutions = solutions.sort_by {|solution| solution.file}
 last_solution = solutions.max_by {|solution| solution.solution_date }
 
 # recreating md file
+
+system_info = SystemInformation.new
 
 File.open("README.md", "w") do |file|
     file.write "# [Project Euler](https://projecteuler.net) Solutions in Kotlin\n\n"
@@ -50,9 +71,13 @@ File.open("README.md", "w") do |file|
     file.write "- Click on Run\n\n"
     file.write "## Last Solution: " + "[" + last_solution.name + "](" + last_solution.file + ")\n\n"
     file.write "### Solved problems(Alphabetical order):\n\n"
-    file.write "Problem | Last update\n"
-    file.write "--- | ---\n"
+    file.write "> The times below were reached on a PC with the settings: <br/>\n"
+    file.write "> Processor model: " + system_info.chip_name + "<br/>\n"
+    file.write "> Number of cores: " + system_info.processor_cores + "<br/>\n"
+    file.write "> RAM: " + system_info.ram + "<br/>\n\n"
+    file.write "Problem| Last update|Last execution time\n"
+    file.write "---|---|---\n"
     solutions.each do |solution|
-        file.write "[" + solution.name + "](" + solution.file + ") | " + solution.solution_date.strftime('%Y, %b %d' + "\n")
+        file.write "[" + solution.name + "](" + solution.file + ")|" + solution.solution_date.strftime('%Y, %b %d' + "|" + solution.elapsed_time.to_s + " ms \n")
     end
 end
