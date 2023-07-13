@@ -23,3 +23,5 @@ fun Int.classification(): NumberClassification{
     else
         NumberClassification.PERFECT
 }
+
+fun Int.figuresToList() = toString().map { it.digitToInt() }
