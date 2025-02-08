@@ -54,8 +54,6 @@ tasks.register("updateReadme") {
         val lineRegex = Regex("^(problems\\.|helpers\\.)")
         val srcsPath = "src/main/kotlin"
         val solutions = mutableListOf<Solution>()
-
-        // Executa os testes e captura a saída
         val testsOutput = ByteArrayOutputStream().use { testsOutputStream ->
             project.exec {
                 commandLine("./gradlew", "clean", "test", "-i")
@@ -65,8 +63,6 @@ tasks.register("updateReadme") {
         }.split("\n")
             .filter { lineRegex.containsMatchIn(it) }
 
-
-        // Lista os arquivos de solução
         val files = File(srcsPath).listFiles { file -> file.extension == "kt" }?.map { it.path }
         files?. forEach { file ->
             val gitOutput = ByteArrayOutputStream().use { gitOutputStream ->
@@ -87,19 +83,24 @@ tasks.register("updateReadme") {
         val sortedSolutions = solutions.sortedBy { it.file }
         val lastSolution = solutions.maxByOrNull { it.solutionDate }
 
-//
-//        files?.forEach { file ->
 
-//            }.output.toString().trim()
-//            val date = SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy Z", Locale.ENGLISH).parse(gitResult)
-//            val elapsedTime = testResults.find { it.contains(fileName) }?.split(" ")?.get(2) ?: "N/A"
-//            solutions.add(Solution(fileName, file.absolutePath, date, elapsedTime))
-//        }
-//
-//        // Ordena as soluções
-//        val sortedSolutions = solutions.sortedBy { it.file }
-//
-        // Gera o conteúdo do README.md
+        val info = mutableMapOf<String, String>()
+
+        val processorOutput = ByteArrayOutputStream().use { processorOutputStream ->
+            project.exec {
+                commandLine("system_profiler", "SPHardwareDataType")
+                standardOutput = processorOutputStream
+            }
+            processorOutputStream.toString().trim()
+        }
+
+        processorOutput.lines().forEach { line ->
+            val parts = line.split(":").map { it.trim() }
+            if (parts.size == 2) {
+                info[parts[0]] = parts[1]
+            }
+        }
+
         val readmeContent = buildString {
             appendLine("# [Project Euler](https://projecteuler.net) Solutions in Kotlin\n")
             appendLine("## Description:")
@@ -114,18 +115,16 @@ tasks.register("updateReadme") {
             appendLine("## Last Solution: [${lastSolution?.name}](${lastSolution?.file})\n")
             appendLine("### Solved problems (Alphabetical order):\n")
             appendLine("> The times below were reached on a PC with the settings: <br/>")
-            appendLine("> Processor model: ${System.getProperty("os.arch")} <br/>")
+            appendLine("> Processor model: ${info["Chip"]} <br/>")
             appendLine("> Number of cores: ${Runtime.getRuntime().availableProcessors()} <br/>")
-            appendLine("> RAM: ${Runtime.getRuntime().maxMemory() / 1024 / 1024} MB <br/>\n")
+            appendLine("> RAM:  ${info["Memory"]?.trim()} <br/>\n")
             appendLine("Problem | Last update | Last execution time")
             appendLine("--- | --- | ---")
             sortedSolutions.forEach { solution ->
                 appendLine("[${solution.name}](${solution.file}) | ${SimpleDateFormat("yyyy, MMM dd").format(solution.solutionDate)} | ${solution.elapsedTime} ms")
             }
         }
-//
-//        // Escreve o conteúdo no README.md
-            File("README.md").writeText(readmeContent)
+        File("README.md").writeText(readmeContent)
     }
 }
 
