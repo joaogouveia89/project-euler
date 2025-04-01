@@ -1,5 +1,5 @@
 import base.Solution
-import base.isPalindrome
+import ext.isPalindrome
 
 class LargestPalindromeProduct : Solution {
 

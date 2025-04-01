@@ -1,6 +1,6 @@
 package helpers
 
-import base.isPalindrome
+import ext.isPalindrome
 import org.junit.jupiter.api.Test
 
 class StringExtensionsTest {

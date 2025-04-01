@@ -1,5 +1,5 @@
 import base.Solution
-import base.getSubstring
+import ext.getSubstring
 
 class LargeSum : Solution {
     private val floorResultRange = 0

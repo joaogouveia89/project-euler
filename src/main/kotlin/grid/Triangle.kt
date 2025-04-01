@@ -1,6 +1,6 @@
 package grid
 
-import base.toTriangle
+import ext.toTriangle
 import java.util.Collections
 import kotlin.math.max
 

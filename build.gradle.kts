@@ -74,6 +74,7 @@ tasks.register("updateReadme") {
             }
             val fileName = file.split("/").last().let { it.substring(0, it.length - 3) }
 
+            println(gitOutput)
             val date = SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy Z", Locale.ENGLISH).parse(gitOutput)
             val elapsedTime = testsOutput.find { it.contains(fileName) }?.split(" ")?.get(2) ?: "N/A"
             val humanizedName = fileName.split(Regex("(?=\\p{Upper})")).joinToString(" ").trim()
