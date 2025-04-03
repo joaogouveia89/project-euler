@@ -1,4 +1,6 @@
 import base.*
+import ext.NumberClassification
+import ext.classification
 
 class NonAbundantSums: Solution { 
 	override val rightSolution = 4179871L

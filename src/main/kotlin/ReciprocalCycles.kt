@@ -1,4 +1,5 @@
 import base.*
+import ext.isPrime
 
 /*
 	A fraction in lowest terms with a prime denominator other than 2 or 5 (i.e. coprime to 10)

@@ -1,4 +1,8 @@
 import base.*
+import ext.isMultipleOf
+import ext.isOdd
+import ext.isPrime
+import ext.pow
 import kotlinx.coroutines.*
 
 class LargestPrimeFactor : Solution {

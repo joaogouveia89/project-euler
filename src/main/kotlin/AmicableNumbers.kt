@@ -1,6 +1,6 @@
 import base.*
+import ext.divisors
 import kotlinx.coroutines.*
-import java.util.concurrent.atomic.AtomicInteger
 
 class AmicableNumbers: Solution {
 	private val scope = CoroutineScope(Dispatchers.IO + Job())

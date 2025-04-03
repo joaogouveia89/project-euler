@@ -1,5 +1,5 @@
 import base.Solution
-import base.mulAll
+import ext.mulAll
 import grid.LongGrid
 import grid.RangeDirection
 import kotlinx.coroutines.*

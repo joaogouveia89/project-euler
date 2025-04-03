@@ -1,5 +1,5 @@
 import base.Solution
-import base.isOdd
+import ext.isOdd
 
 class LongestCollatzSequence : Solution {
 

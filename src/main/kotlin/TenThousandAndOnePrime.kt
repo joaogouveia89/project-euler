@@ -1,5 +1,5 @@
 import base.Solution
-import base.isPrime
+import ext.isPrime
 
 class TenThousandAndOnePrime : Solution {
     companion object {

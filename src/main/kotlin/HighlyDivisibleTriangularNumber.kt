@@ -1,5 +1,5 @@
 import base.Solution
-import base.nUmOfDivisors
+import ext.nUmOfDivisors
 
 class HighlyDivisibleTriangularNumber : Solution {
     private val divisorsRoof = 500

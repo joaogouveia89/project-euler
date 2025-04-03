@@ -1,4 +1,4 @@
-package base
+package ext
 
 fun LongArray.mulAll() = this.let {
     if (it.isEmpty()) 0L

@@ -1,4 +1,4 @@
-package base
+package ext
 
 // used big integer here for the sake of precision
 fun Long.pow(exponent: Int): Long = toBigInteger().pow(exponent).toLong()

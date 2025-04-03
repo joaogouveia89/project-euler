@@ -1,5 +1,5 @@
 import base.Solution
-import base.isPrime
+import ext.isPrime
 import kotlinx.coroutines.*
 
 class SummationOfPrimes : Solution {

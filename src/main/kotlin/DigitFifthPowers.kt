@@ -1,4 +1,5 @@
 import base.*
+import ext.figuresToList
 import kotlin.math.pow
 
 // boundaring as https://www.xarg.org/puzzle/project-euler/problem-30/

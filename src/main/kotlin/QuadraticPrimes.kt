@@ -1,4 +1,5 @@
 import base.*
+import ext.isPrime
 
 class QuadraticPrimes: Solution { 
 	override val rightSolution = -59231L

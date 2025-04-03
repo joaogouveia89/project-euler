@@ -1,6 +1,6 @@
 package helpers
 
-import base.divisors
+import ext.divisors
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

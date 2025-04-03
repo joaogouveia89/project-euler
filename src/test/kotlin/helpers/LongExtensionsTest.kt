@@ -1,7 +1,7 @@
 package helpers
 
-import base.isMultipleOf
-import base.isPrime
+import ext.isMultipleOf
+import ext.isPrime
 import org.junit.jupiter.api.Test
 
 class LongExtensionsTest {

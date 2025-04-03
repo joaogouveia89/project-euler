@@ -1,5 +1,5 @@
 import base.Solution
-import base.isEven
+import ext.isEven
 
 class EvenFibonacciNumbers : Solution {
 

@@ -1,5 +1,5 @@
 import base.Solution
-import base.mulAll
+import ext.mulAll
 import kotlinx.coroutines.*
 
 class LargestProductInASeries(
