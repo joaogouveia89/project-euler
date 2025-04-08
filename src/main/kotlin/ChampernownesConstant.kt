@@ -1,7 +1,7 @@
 import base.*
 
 class ChampernownesConstant: Solution { 
-	override val rightSolution = 240L
+	override val rightSolution = 210L
 	override fun solve(): Long{
 		var currentSize = 0L
 		var currentNum = 1L
