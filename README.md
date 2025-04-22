@@ -12,7 +12,7 @@
 - Right click on test folder
 - Click on Run
 
-## Last Solution: [Triangular Pentagonal And Hexagonal](src/main/kotlin/TriangularPentagonalAndHexagonal.kt)
+## Last Solution: [Goldbachs Other Conjecture](src/main/kotlin/GoldbachsOtherConjecture.kt)
 
 ### Solved problems (Alphabetical order):
 
@@ -23,46 +23,47 @@
 
 | Problem                                                                                           | Last update   | Last execution time |
 |---------------------------------------------------------------------------------------------------|---------------|---------------------|
-| [Amicable Numbers](src/main/kotlin/AmicableNumbers.kt)                                            | 2025, abr. 03 | 109 ms              |
-| [Champernownes Constant](src/main/kotlin/ChampernownesConstant.kt)                                | 2025, abr. 08 | 8 ms                |
-| [Circular Primes](src/main/kotlin/CircularPrimes.kt)                                              | 2025, abr. 03 | 483 ms              |
+| [Amicable Numbers](src/main/kotlin/AmicableNumbers.kt)                                            | 2025, abr. 03 | 182 ms              |
+| [Champernownes Constant](src/main/kotlin/ChampernownesConstant.kt)                                | 2025, abr. 08 | 9 ms                |
+| [Circular Primes](src/main/kotlin/CircularPrimes.kt)                                              | 2025, abr. 03 | 471 ms              |
 | [Coded Triangle Numbers](src/main/kotlin/CodedTriangleNumbers.kt)                                 | 2025, abr. 15 | 7 ms                |
-| [Coin Sums](src/main/kotlin/CoinSums.kt)                                                          | 2023, jul. 14 | 23 ms               |
+| [Coin Sums](src/main/kotlin/CoinSums.kt)                                                          | 2023, jul. 14 | 21 ms               |
 | [Counting Sundays](src/main/kotlin/CountingSundays.kt)                                            | 2022, out. 26 | 3 ms                |
-| [Digit Cancelling Fractions](src/main/kotlin/DigitCancellingFractions.kt)                         | 2025, abr. 01 | 6 ms                |
-| [Digit Fifth Powers](src/main/kotlin/DigitFifthPowers.kt)                                         | 2025, abr. 03 | 84 ms               |
+| [Digit Cancelling Fractions](src/main/kotlin/DigitCancellingFractions.kt)                         | 2025, abr. 01 | 7 ms                |
+| [Digit Fifth Powers](src/main/kotlin/DigitFifthPowers.kt)                                         | 2025, abr. 03 | 82 ms               |
 | [Distinct Powers](src/main/kotlin/DistinctPowers.kt)                                              | 2023, jul. 12 | 10 ms               |
 | [Even Fibonacci Numbers](src/main/kotlin/EvenFibonacciNumbers.kt)                                 | 2025, abr. 03 | 0 ms                |
-| [Factorial Digit Sum](src/main/kotlin/FactorialDigitSum.kt)                                       | 2023, jun. 30 | 0 ms                |
-| [First Thounsand Digits Fibonacci Number](src/main/kotlin/FirstThounsandDigitsFibonacciNumber.kt) | 2023, jul. 07 | 68 ms               |
-| [Highly Divisible Triangular Number](src/main/kotlin/HighlyDivisibleTriangularNumber.kt)          | 2025, abr. 03 | 47 ms               |
-| [Integer Right Triangles](src/main/kotlin/IntegerRightTriangles.kt)                               | 2025, abr. 08 | 14 ms               |
-| [Large Sum](src/main/kotlin/LargeSum.kt)                                                          | 2025, abr. 01 | 2 ms                |
-| [Largest Palindrome Product](src/main/kotlin/LargestPalindromeProduct.kt)                         | 2025, abr. 01 | 26 ms               |
-| [Largest Prime Factor](src/main/kotlin/LargestPrimeFactor.kt)                                     | 2025, abr. 03 | 39 ms               |
-| [Largest Product In A Grid](src/main/kotlin/LargestProductInAGrid.kt)                             | 2025, abr. 03 | 16 ms               |
-| [Largest Product In A Series](src/main/kotlin/LargestProductInASeries.kt)                         | 2025, abr. 03 | 11 ms               |
+| [Factorial Digit Sum](src/main/kotlin/FactorialDigitSum.kt)                                       | 2023, jun. 30 | 1 ms                |
+| [First Thounsand Digits Fibonacci Number](src/main/kotlin/FirstThounsandDigitsFibonacciNumber.kt) | 2023, jul. 07 | 64 ms               |
+| [Goldbachs Other Conjecture](src/main/kotlin/GoldbachsOtherConjecture.kt)                         | 2025, abr. 22 | 50 ms               |
+| [Highly Divisible Triangular Number](src/main/kotlin/HighlyDivisibleTriangularNumber.kt)          | 2025, abr. 03 | 44 ms               |
+| [Integer Right Triangles](src/main/kotlin/IntegerRightTriangles.kt)                               | 2025, abr. 08 | 17 ms               |
+| [Large Sum](src/main/kotlin/LargeSum.kt)                                                          | 2025, abr. 01 | 3 ms                |
+| [Largest Palindrome Product](src/main/kotlin/LargestPalindromeProduct.kt)                         | 2025, abr. 01 | 28 ms               |
+| [Largest Prime Factor](src/main/kotlin/LargestPrimeFactor.kt)                                     | 2025, abr. 03 | 38 ms               |
+| [Largest Product In A Grid](src/main/kotlin/LargestProductInAGrid.kt)                             | 2025, abr. 03 | 18 ms               |
+| [Largest Product In A Series](src/main/kotlin/LargestProductInASeries.kt)                         | 2025, abr. 03 | 10 ms               |
 | [Lattice Paths](src/main/kotlin/LatticePaths.kt)                                                  | 2022, nov. 07 | 0 ms                |
-| [Lexicographic Permutations](src/main/kotlin/LexicographicPermutations.kt)                        | 2023, jul. 06 | 92 ms               |
-| [Longest Collatz Sequence](src/main/kotlin/LongestCollatzSequence.kt)                             | 2025, abr. 03 | 348 ms              |
+| [Lexicographic Permutations](src/main/kotlin/LexicographicPermutations.kt)                        | 2023, jul. 06 | 89 ms               |
+| [Longest Collatz Sequence](src/main/kotlin/LongestCollatzSequence.kt)                             | 2025, abr. 03 | 347 ms              |
 | [Maximum Path Sum I](src/main/kotlin/MaximumPathSumI.kt)                                          | 2023, mai. 29 | 1 ms                |
-| [Multiples Of3 And5](src/main/kotlin/MultiplesOf3And5.kt)                                         | 2022, out. 24 | 0 ms                |
+| [Multiples Of3 And5](src/main/kotlin/MultiplesOf3And5.kt)                                         | 2022, out. 24 | 1 ms                |
 | [Names Scores](src/main/kotlin/NamesScores.kt)                                                    | 2023, jun. 30 | 8 ms                |
-| [Non Abundant Sums](src/main/kotlin/NonAbundantSums.kt)                                           | 2025, abr. 03 | 706 ms              |
+| [Non Abundant Sums](src/main/kotlin/NonAbundantSums.kt)                                           | 2025, abr. 03 | 668 ms              |
 | [Number Letter Counts](src/main/kotlin/NumberLetterCounts.kt)                                     | 2022, nov. 18 | 5 ms                |
 | [Number Spiral Diagonals](src/main/kotlin/NumberSpiralDiagonals.kt)                               | 2023, jul. 12 | 1 ms                |
-| [Pandigital Multiples](src/main/kotlin/PandigitalMultiples.kt)                                    | 2025, abr. 04 | 30 ms               |
+| [Pandigital Multiples](src/main/kotlin/PandigitalMultiples.kt)                                    | 2025, abr. 04 | 24 ms               |
 | [Pandigital Prime](src/main/kotlin/PandigitalPrime.kt)                                            | 2025, abr. 10 | 5 ms                |
-| [Pandigital Products](src/main/kotlin/PandigitalProducts.kt)                                      | 2025, abr. 01 | 251 ms              |
+| [Pandigital Products](src/main/kotlin/PandigitalProducts.kt)                                      | 2025, abr. 01 | 247 ms              |
 | [Pentagon Numbers](src/main/kotlin/PentagonNumbers.kt)                                            | 2025, abr. 17 | 30 ms               |
-| [Power Digit Sum](src/main/kotlin/PowerDigitSum.kt)                                               | 2022, nov. 17 | 15 ms               |
-| [Quadratic Primes](src/main/kotlin/QuadraticPrimes.kt)                                            | 2025, abr. 03 | 73 ms               |
-| [Reciprocal Cycles](src/main/kotlin/ReciprocalCycles.kt)                                          | 2025, abr. 03 | 0 ms                |
-| [Smallest Multiple](src/main/kotlin/SmallestMultiple.kt)                                          | 2022, out. 24 | 37 ms               |
-| [Special Pythagorean Triplet](src/main/kotlin/SpecialPythagoreanTriplet.kt)                       | 2022, out. 24 | 11 ms               |
-| [Substring Divisibility](src/main/kotlin/SubstringDivisibility.kt)                                | 2025, abr. 16 | 179 ms              |
+| [Power Digit Sum](src/main/kotlin/PowerDigitSum.kt)                                               | 2022, nov. 17 | 14 ms               |
+| [Quadratic Primes](src/main/kotlin/QuadraticPrimes.kt)                                            | 2025, abr. 03 | 43 ms               |
+| [Reciprocal Cycles](src/main/kotlin/ReciprocalCycles.kt)                                          | 2025, abr. 03 | 1 ms                |
+| [Smallest Multiple](src/main/kotlin/SmallestMultiple.kt)                                          | 2022, out. 24 | 49 ms               |
+| [Special Pythagorean Triplet](src/main/kotlin/SpecialPythagoreanTriplet.kt)                       | 2022, out. 24 | 18 ms               |
+| [Substring Divisibility](src/main/kotlin/SubstringDivisibility.kt)                                | 2025, abr. 16 | 165 ms              |
 | [Sum Square Difference](src/main/kotlin/SumSquareDifference.kt)                                   | 2022, out. 24 | 0 ms                |
-| [Summation Of Primes](src/main/kotlin/SummationOfPrimes.kt)                                       | 2025, abr. 03 | 39 ms               |
+| [Summation Of Primes](src/main/kotlin/SummationOfPrimes.kt)                                       | 2025, abr. 03 | 38 ms               |
 | [Ten Thousand And One Prime](src/main/kotlin/TenThousandAndOnePrime.kt)                           | 2025, abr. 03 | 4 ms                |
-| [Triangular Pentagonal And Hexagonal](src/main/kotlin/TriangularPentagonalAndHexagonal.kt)        | 2025, abr. 21 | 2 ms                |
+| [Triangular Pentagonal And Hexagonal](src/main/kotlin/TriangularPentagonalAndHexagonal.kt)        | 2025, abr. 21 | 1 ms                |
 | [Truncatable Primes](src/main/kotlin/TruncatablePrimes.kt)                                        | 2025, abr. 04 | 14 ms               |
